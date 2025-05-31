@@ -18,9 +18,9 @@ jobs:
       run: |
         npm install
 
-    - name: Build the frontend
-      run: |
-        npm run build  # or your actual build command
+    #- name: Build the frontend
+      #run: |
+        #npm run build  # or your actual build command
         
     - name: Copy and chmod artifact
       run: |
