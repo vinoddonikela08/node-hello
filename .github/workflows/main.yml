@@ -21,13 +21,11 @@ jobs:
     #- name: Build the frontend
       #run: |
         #npm run build  # or your actual build command
-        
-    - name: Copy and chmod artifact
+    - name: Copy frontend build to Apache directory
       run: |
-        #ARTIFACT_PATH=/home/ubuntu/actions-runner/_work/node-hello/node-hello/
-        #DEST_PATH=/application/frontend
-        #cp "$ARTIFACT_PATH" "$DEST_PATH"
-        sudo cp /home/ubuntu/actions-runner/_work/node-hello/node-hello/* /application/frontend
-        sudo chmod 777 * /application/frontend
-        echo "Copied artifact to $DEST_PATH"
+        cd /application/
+        sudo rm -rf frontend
+        sudo cp -r /home/ubuntu/actions-runner/_work/node-hello/node-hello /application/
+        sudo mv /application/node-hello /application/frontend
+        sudo chmod -R 777 /application/frontend
         sudo systemctl restart apache2
