@@ -1,20 +1,16 @@
 {
-  "name": "node-hello",
+  "name": "my-react-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3"
+  },
   "scripts": {
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johnpapa/node-hello.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/johnpapa/node-hello/issues"
-  },
-  "homepage": "https://github.com/johnpapa/node-hello#readme"
+    "start": "react-scripts start",
+    "build": "react-scripts build",  // This generates the build folder
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
 }
