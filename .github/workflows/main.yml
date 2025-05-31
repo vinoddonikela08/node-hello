@@ -27,7 +27,7 @@ jobs:
         #ARTIFACT_PATH=/home/ubuntu/actions-runner/_work/node-hello/node-hello/
         #DEST_PATH=/application/frontend
         #cp "$ARTIFACT_PATH" "$DEST_PATH"
-        cp /home/ubuntu/actions-runner/_work/node-hello/node-hello/* /application/frontend
-        chmod 777 "$DEST_PATH"
+        sudo cp /home/ubuntu/actions-runner/_work/node-hello/node-hello/* /application/frontend
+        sudo chmod 777 "$DEST_PATH"
         echo "Copied artifact to $DEST_PATH"
         sudo systemctl restart apache2
